@@ -77,4 +77,13 @@ public class ClienteController {
         return modelAndView;
     }
 
+    @PostMapping("/{id}/editar")
+    public ModelAndView editar(Cliente cliente) {
+        ModelAndView modelAndView = new ModelAndView("redirect:/clientes");
+        
+        clienteRepository.save(cliente);
+
+        return modelAndView;
+    }
+
 }
