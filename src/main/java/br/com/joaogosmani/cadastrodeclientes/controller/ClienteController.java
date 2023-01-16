@@ -48,4 +48,13 @@ public class ClienteController {
         return modelAndView;
     }
 
+    @GetMapping("/cadastrar")
+    public ModelAndView cadastrar() {
+        ModelAndView modelAndView = new ModelAndView("/cliente/cadastro");
+
+        modelAndView.addObject("cliente", new Cliente());
+
+        return modelAndView;
+    }
+
 }
