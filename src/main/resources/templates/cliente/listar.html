@@ -47,7 +47,12 @@
                             <td th:text="${cliente.dataNascimento}"></td>
                             <td th:text="${cliente.profissao}"></td>
                             <td>
-                                <a href="" class="btn btn-warning">Editar</a>
+                                <a 
+                                    th:href="@{clientes/{id}/editar (id=${cliente.id})}" 
+                                    class="btn btn-warning"
+                                >
+                                    Editar
+                                </a>
                                 <a 
                                     th:href="@{/clientes/{id}/excluir (id=${cliente.id})}" 
                                     class="btn btn-danger"
@@ -64,7 +69,7 @@
 
         <div class="row">
             <div class="col-sm-12">
-                <a href="" class="btn btn-primary">Cadastrar novo cliente</a>
+                <a th:href="@{/clientes/cadastrar}" class="btn btn-primary">Cadastrar novo cliente</a>
             </div>
         </div>
     </main>
