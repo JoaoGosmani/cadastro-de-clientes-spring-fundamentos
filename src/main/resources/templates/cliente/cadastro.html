@@ -28,7 +28,7 @@
                 <form method="POST" th:object="${cliente}">
                     <div class="mb-3">
                         <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome" th:filed="*{nome}">
+                        <input type="text" class="form-control" id="nome" th:field="*{nome}">
                     </div>
                     <div class="mb-3">
                         <label for="dataNascimento" class="form-label">Data de nascimento</label>
@@ -36,12 +36,12 @@
                             type="date" 
                             class="form-control" 
                             id="dataNascimento" 
-                            th:filed="*{dataNascimento}"
+                            th:field="*{dataNascimento}"
                         >
                     </div>
                     <div class="mb-3">
                         <label for="profissao" class="form-label">Profissão</label>
-                        <input type="text" class="form-control" id="profissao" th:filed="*{profissao}">
+                        <input type="text" class="form-control" id="profissao" th:field="*{profissao}">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Salvar</button>
