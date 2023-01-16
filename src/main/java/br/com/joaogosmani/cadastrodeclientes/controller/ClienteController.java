@@ -67,4 +67,14 @@ public class ClienteController {
         return modelAndView;
     }
 
+    @GetMapping("/{id}/editar")
+    public ModelAndView editar(@PathVariable Long id) {
+        ModelAndView modelAndView = new ModelAndView("cliente/edicao");
+
+        Cliente cliente = clienteRepository.findById(id).get();
+        modelAndView.addObject("cliente", cliente);
+
+        return modelAndView;
+    }
+
 }
